@@ -156,6 +156,7 @@ export function ConversationsView() {
                   <input
                     className="field"
                     placeholder="Write to this conversation…"
+                    aria-label={`Message to ${active.title}`}
                     value={draft}
                     onChange={(event) => setDraft(event.target.value)}
                     onKeyDown={(event) => {
@@ -171,9 +172,6 @@ export function ConversationsView() {
                     <Send className="size-4" />
                   </button>
                 </div>
-                <p className="mt-2 text-[11px] leading-5 text-muted-foreground">
-                  Prototype only. Messages stay in browser state.
-                </p>
               </div>
             </>
           ) : (

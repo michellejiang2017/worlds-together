@@ -30,7 +30,7 @@ export function NetworkPrototype() {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4">
           <button
             className="flex items-center gap-3 text-left"
-            onClick={() => setSection("home")}
+            onClick={() => { setSection("home"); window.scrollTo({ top: 0, behavior: "instant" }); }}
             aria-label="Worlds Together home"
           >
             <img className="size-11 object-contain" src="/worlds-together-logo.png" alt="" width="44" height="44" />
