@@ -155,11 +155,10 @@ export function ConnectView() {
           Connect across campuses
         </p>
         <h1 className="mt-3 font-sans text-3xl font-bold tracking-[-0.03em] sm:text-4xl">
-          Describe who you want to meet. Keep the reasoning private.
+          Meet someone you’d actually click with.
         </h1>
         <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base">
-          A small language model runs in your browser to understand your free-text intent. Explicit
-          preferences still control availability, cross-campus fit, and meeting format.
+          A shared interest. A time that works. One introduction.
         </p>
       </header>
 
@@ -213,18 +212,19 @@ export function ConnectView() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-primary/20 bg-primary/7 p-4">
+            <details className="rounded-xl border border-border bg-secondary/30 p-4">
+              <summary className="cursor-pointer text-sm font-medium">How matching works</summary>
               <div className="flex items-start gap-3">
                 <Cpu className="mt-0.5 size-4 shrink-0 text-primary" />
                 <div>
-                  <p className="text-sm font-medium">Local AI matching</p>
+
                   <p className="mt-1 text-xs leading-5 text-muted-foreground">
                     On first use, the browser downloads a small MiniLM embedding model. Your text is
                     then processed on-device with no AI API key.
                   </p>
                 </div>
               </div>
-            </div>
+            </details>
 
             <div className="space-y-2">
               <p className="text-sm font-medium">Interests</p>
@@ -298,7 +298,7 @@ export function ConnectView() {
               {aiStatus === "loading" ? (
                 <>
                   <LoaderCircle className="size-4 animate-spin" />
-                  Loading local model and ranking
+                  Finding an introduction…
                 </>
               ) : (
                 <>
@@ -317,11 +317,10 @@ export function ConnectView() {
               <div className="max-w-sm">
                 <Building2 className="mx-auto size-9 text-muted-foreground" />
                 <h2 className="mt-5 font-sans text-xl font-semibold">
-                  No profiles to swipe through
+                  Your next introduction
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Describe what you need. Worlds Together combines semantic similarity with explicit
-                  privacy-aware matching rules and surfaces one cross-campus introduction.
+                  Choose your interests and availability to meet someone at another college.
                 </p>
               </div>
             </section>
@@ -458,11 +457,6 @@ export function ConnectView() {
               </section>
 
               <NetworkMap matches={matches} activeStudentId={current.student.id} />
-
-              <p className="px-1 text-xs leading-5 text-muted-foreground">
-                Synthetic profiles only. AI contributes semantic similarity, while explicit rules
-                still handle privacy, availability, and cross-campus constraints.
-              </p>
             </>
           ) : (
             <section className="card-soft p-8">

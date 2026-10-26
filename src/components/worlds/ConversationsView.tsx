@@ -41,11 +41,10 @@ export function ConversationsView() {
           Private conversations
         </p>
         <h1 className="mt-3 font-sans text-3xl font-bold tracking-[-0.03em] sm:text-4xl">
-          Talk across campuses without exposing the whole network.
+          Find something in common.
         </h1>
         <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base">
-          You see conversations you joined and the people who actively participate. There is no
-          public member directory or giant group roster.
+          Small conversations, with people who choose to take part.
         </p>
       </header>
 

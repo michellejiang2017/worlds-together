@@ -61,12 +61,9 @@ export function CommunityBoard() {
             Community board
           </p>
           <h1 className="mt-3 font-sans text-3xl font-bold tracking-[-0.03em] sm:text-4xl">
-            The useful part of a campus Facebook group, across colleges.
+            A room. A ride. A little help.
           </h1>
-          <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base">
-            Housing requests and offers, rides, travel, campus visits, and practical help. Posting
-            makes you visible for that post only.
-          </p>
+
         </header>
 
         <button className="btn-primary shrink-0" onClick={() => setShowComposer((value) => !value)}>
